@@ -1,0 +1,52 @@
+<div class="schedule-meetings-form">
+  <div class="container">
+    <div class="row">
+      <form [formGroup]="scheduleNewMeetingForm" (ngSubmit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            formControlName="meetingDate"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Time</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Time"
+            formControlName="meetingTime"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Meeting Description</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder=""
+            formControlName="meetingDesc"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Meeting Participants</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="comma for multiple entires"
+            formControlName="meetingParticipant"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
